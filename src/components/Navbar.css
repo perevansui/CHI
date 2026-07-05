@@ -1,0 +1,178 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(234, 227, 221, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  transition: var(--transition);
+}
+
+.navbar.scrolled {
+  padding: 5px 0;
+  background: rgba(234, 227, 221, 0.95);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo img {
+  height: 45px;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--dark);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 0;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--pink-bright);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--white);
+  min-width: 200px;
+  border-radius: 12px;
+  padding: 10px 0;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+/* On desktop, show dropdown on hover */
+@media (min-width: 901px) {
+  .nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-menu a {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  color: var(--dark);
+  transition: var(--transition);
+}
+
+.dropdown-menu a:hover {
+  background: var(--sand);
+  color: var(--pink-bright);
+  padding-left: 25px;
+}
+
+.donate-btn {
+  margin-left: 10px;
+  padding: 10px 24px;
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--purple-deep);
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .mobile-toggle {
+    display: block;
+  }
+  
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 15px;
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    border-top: 1px solid var(--sand);
+  }
+  
+  .nav-links.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    width: 100%;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--sand);
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background: transparent;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .dropdown-menu.active {
+    display: flex;
+  }
+
+  .dropdown-menu a {
+    padding: 12px 20px;
+    border-left: 3px solid var(--sand);
+    margin-bottom: 5px;
+  }
+  
+  .donate-btn {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}
