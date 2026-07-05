@@ -24,35 +24,40 @@ const Programs = () => {
       title: 'Cervical Cancer School Outreach',
       location: 'Anglican Grammar School & Nurudeen Grammar School, Ogbomoso',
       description: 'Focused on cervical cancer knowledge and HPV vaccination uptake among secondary students. Interactive discussions on risk factors, prevention, and treatment.',
-      highlights: ['Role of HPV', 'Benefits of HPV vaccination', 'Importance of regular screenings']
+      highlights: ['Role of HPV', 'Benefits of HPV vaccination', 'Importance of regular screenings'],
+      image: '/assets/students.jpg'
     },
     {
       date: 'Feb 10, 2024',
       title: 'World Cancer Day Webinar',
       location: 'Google Meet',
       description: 'Theme: "Demystifying Cancer: Myths and Facts". Featured Dr. Fatima Dambatta. Addressed misconceptions like cancer being hereditary, contagious, or supernatural.',
-      highlights: ['Early detection is key', 'Be vigilant', 'Ensure routine screenings', 'Lead healthy lifestyle']
+      highlights: ['Early detection is key', 'Be vigilant', 'Ensure routine screenings', 'Lead healthy lifestyle'],
+      image: null
     },
     {
       date: 'April 2, 2024',
       title: 'Prostate Cancer Stakeholders Meeting',
       location: 'Ogbomoso Sawmill',
       description: 'Brought together sawmill leaders and workers to discuss the prostate cancer burden and practical strategies.',
-      highlights: ['Community impact', 'Practical prevention strategies']
+      highlights: ['Community impact', 'Practical prevention strategies'],
+      image: '/assets/prostate.jpg'
     },
     {
       date: 'June 14, 2024',
       title: "Life After Cancer: Survivor's Journey Series",
       location: 'Webinar',
       description: 'Featured Mrs. Gloria Chinyere Okwu, Project Coordinator at Project Pink Blue. Spotlight on cancer survivor experiences.',
-      highlights: ['Counseling services', 'Survivor networks', 'Post-treatment care']
+      highlights: ['Counseling services', 'Survivor networks', 'Post-treatment care'],
+      image: null
     },
     {
       date: 'October 2024',
       title: 'Breast Cancer Awareness Walk',
       location: 'LAUTECH Teaching Hospital, Ogbomoso',
       description: 'Volunteers distributed pamphlets in English and Yoruba with placards featuring myth-busting slogans. 75% of breast cancer is detected through self-examination.',
-      highlights: ['Step-by-step self-breast examination guides', 'Myth-busting slogans', 'Community engagement']
+      highlights: ['Step-by-step self-breast examination guides', 'Myth-busting slogans', 'Community engagement'],
+      image: '/assets/breast-walk.jpg'
     }
   ];
 
@@ -74,27 +79,34 @@ const Programs = () => {
               <div key={index} className="reveal" style={{
                 background: 'var(--white)',
                 borderRadius: 'var(--radius)',
-                padding: '40px',
-                boxShadow: 'var(--shadow-sm)',
+                boxShadow: 'var(--shadow-md)',
+                overflow: 'hidden',
                 borderLeft: '4px solid var(--pink-bright)'
               }}>
-                <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginBottom: '15px', color: 'var(--pink-bright)', fontWeight: '600' }}>
-                  <Calendar size={18} />
-                  <span>{program.date}</span>
-                </div>
-                <h3 style={{ marginBottom: '10px' }}>{program.title}</h3>
-                <div style={{ display: 'flex', gap: '8px', alignItems: 'center', marginBottom: '20px', color: '#666', fontSize: '0.9rem' }}>
-                  <MapPin size={16} />
-                  <span>{program.location}</span>
-                </div>
-                <p style={{ marginBottom: '20px', color: '#444' }}>{program.description}</p>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px' }}>
-                  {program.highlights.map((highlight, hIndex) => (
-                    <div key={hIndex} style={{ display: 'flex', gap: '8px', alignItems: 'center', fontSize: '0.9rem', color: '#555' }}>
-                      <CheckCircle size={16} color="var(--pink-bright)" />
-                      <span>{highlight}</span>
-                    </div>
-                  ))}
+                {program.image && (
+                  <div style={{ width: '100%', height: '300px' }}>
+                    <img src={program.image} alt={program.title} className="img-cover" style={{ borderRadius: 0 }} />
+                  </div>
+                )}
+                <div style={{ padding: '40px' }}>
+                  <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginBottom: '15px', color: 'var(--pink-bright)', fontWeight: '600' }}>
+                    <Calendar size={18} />
+                    <span>{program.date}</span>
+                  </div>
+                  <h3 style={{ marginBottom: '10px' }}>{program.title}</h3>
+                  <div style={{ display: 'flex', gap: '8px', alignItems: 'center', marginBottom: '20px', color: '#666', fontSize: '0.9rem' }}>
+                    <MapPin size={16} />
+                    <span>{program.location}</span>
+                  </div>
+                  <p style={{ marginBottom: '20px', color: '#444' }}>{program.description}</p>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px' }}>
+                    {program.highlights.map((highlight, hIndex) => (
+                      <div key={hIndex} style={{ display: 'flex', gap: '8px', alignItems: 'center', fontSize: '0.9rem', color: '#555' }}>
+                        <CheckCircle size={16} color="var(--pink-bright)" />
+                        <span>{highlight}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}

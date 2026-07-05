@@ -78,12 +78,12 @@ const Advocacy = () => {
       {/* SSCCEN Summit Highlight */}
       <section className="section section-light">
         <div className="container">
-          <div className="grid-2 align-center">
-            <div className="reveal">
+          <div className="swiss-grid align-center">
+            <div className="col-5 reveal">
               <div style={{ display: 'inline-block', padding: '8px 16px', background: 'var(--pink-soft)', color: 'var(--purple-deep)', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 'bold', marginBottom: '20px' }}>
                 Key Event Participation
               </div>
-              <h2 style={{ marginBottom: '20px' }}>SSCCEN 2024 Summit</h2>
+              <h2 style={{ marginBottom: '20px', fontSize: '2.5rem', lineHeight: '1.1' }}>SSCCEN 2024 Summit</h2>
               <p style={{ marginBottom: '20px', color: '#555' }}>
                 CHI participated actively in the 2nd Stakeholders Summit on Cervical Cancer Elimination in Nigeria, held December 4-6, 2024, at the Chida International Hotel in Abuja.
               </p>
@@ -94,21 +94,29 @@ const Advocacy = () => {
                 View Our Summit Presentation <ArrowRight size={18} />
               </Link>
             </div>
-            <div className="reveal" style={{ transitionDelay: '0.2s' }}>
-              <div style={{
-                background: 'var(--purple-deep)',
-                borderRadius: 'var(--radius)',
-                padding: '50px',
-                color: 'var(--white)',
-                boxShadow: 'var(--shadow-lg)',
-                position: 'relative',
-                overflow: 'hidden'
-              }}>
-                <ShieldCheck size={120} color="var(--pink-bright)" style={{ position: 'absolute', right: '-20px', bottom: '-20px', opacity: '0.1' }} />
-                <h3 style={{ color: 'var(--pink-soft)', marginBottom: '20px' }}>The Power of Partnership</h3>
-                <p style={{ fontSize: '1.1rem', lineHeight: '1.7' }}>
-                  "We believe that a collective approach involving public and private stakeholders is essential to address cancer health disparities effectively. To scale up our efforts, more partnerships, funding, and collaboration are critically needed."
-                </p>
+            
+            <div className="col-7 reveal" style={{ transitionDelay: '0.2s' }}>
+              <div className="swiss-grid" style={{ gap: '20px' }}>
+                <div className="col-12" style={{ height: '250px' }}>
+                  <img src="/assets/ssccen-group.jpg" alt="SSCCEN Group Photo" className="img-cover" />
+                </div>
+                <div className="col-6" style={{ height: '250px' }}>
+                  <img src="/assets/ssccen-panel.jpg" alt="SSCCEN Panel" className="img-cover" />
+                </div>
+                <div className="col-6" style={{ 
+                  background: 'var(--purple-deep)', 
+                  borderRadius: 'var(--radius)', 
+                  padding: '30px', 
+                  color: 'var(--white)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center'
+                }}>
+                  <ShieldCheck size={40} color="var(--pink-bright)" style={{ marginBottom: '15px' }} />
+                  <p style={{ fontSize: '0.95rem', fontStyle: 'italic', lineHeight: '1.6', margin: 0 }}>
+                    "We believe that a collective approach involving public and private stakeholders is essential to address cancer health disparities effectively."
+                  </p>
+                </div>
               </div>
             </div>
           </div>

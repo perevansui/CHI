@@ -65,8 +65,12 @@ const Team = () => {
             </div>
             
             <div className="team-card reveal" style={{ transitionDelay: '0.2s' }}>
-              <div className="team-img-wrapper placeholder-img">
-                <span>Photo</span>
+              <div className="team-img-wrapper">
+                <img src="/assets/team-3.jpg" alt="Ogugbemi Bridget" />
+                <div className="team-social">
+                  <a href="#" aria-label="Profile"><ExternalLink size={18} /></a>
+                  <a href="#" aria-label="Email"><Mail size={18} /></a>
+                </div>
               </div>
               <div className="team-info">
                 <h3>Ogugbemi Bridget</h3>
@@ -75,8 +79,12 @@ const Team = () => {
             </div>
 
             <div className="team-card reveal" style={{ transitionDelay: '0.3s' }}>
-              <div className="team-img-wrapper placeholder-img">
-                <span>Photo</span>
+              <div className="team-img-wrapper">
+                <img src="/assets/team-4.jpg" alt="Alayande Elijah" />
+                <div className="team-social">
+                  <a href="#" aria-label="Profile"><ExternalLink size={18} /></a>
+                  <a href="#" aria-label="Email"><Mail size={18} /></a>
+                </div>
               </div>
               <div className="team-info">
                 <h3>Alayande Elijah</h3>
