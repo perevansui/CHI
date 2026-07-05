@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancer Health Initiative | Redefining the Journey</title>
+    
+    <!-- Fonts: Montserrat & Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --sand: #EAE3DD;
+            --pink-bright: #FB5998;
+            --purple-deep: #330A61;
+            --pink-soft: #FFCFE1;
+            --dark: #311212;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--sand);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; text-transform: uppercase; letter-spacing: -0.02em; }
+
+        /* Navigation */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 5%; background: rgba(234, 227, 221, 0.9);
+            backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000;
+        }
+        .logo { font-family: 'Montserrat'; font-weight: 800; color: var(--purple-deep); font-size: 1.5rem; }
+        .nav-links a { text-decoration: none; color: var(--dark); margin: 0 15px; font-weight: 600; font-size: 0.9rem; }
+        .btn-donate { background: var(--pink-bright); color: white !important; padding: 10px 25px; border-radius: 50px; }
+
+        /* Hero Section */
+        .hero {
+            display: flex; align-items: center; min-height: 80vh; padding: 0 10%;
+            gap: 50px; background: linear-gradient(180deg, var(--sand) 0%, var(--white) 100%);
+        }
+        .hero-content { flex: 1; }
+        .hero h1 { font-size: 4rem; color: var(--purple-deep); line-height: 1.1; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
+        .hero-image { flex: 1; border-radius: 40px; overflow: hidden; height: 500px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .hero-image img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Features */
+        .section { padding: 100px 10%; text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+        .card { 
+            background: white; padding: 40px; border-radius: 24px; 
+            border: 1px solid var(--pink-soft); transition: transform 0.3s ease;
+            text-align: left;
+        }
+        .card:hover { transform: translateY(-10px); }
+        .card h3 { color: var(--pink-bright); margin-bottom: 15px; }
+
+        /* Stats */
+        .stats-bar { background: var(--purple-deep); color: var(--sand); padding: 80px 10%; display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center;}
+        .stat-item h2 { font-size: 3rem; margin-bottom: 10px; color: var(--pink-bright); }
+
+        /* Community Story */
+        .story { background: var(--pink-soft); border-radius: 40px; padding: 60px; margin: 0 10% 100px; display: flex; align-items: center; gap: 40px; }
+        .story-content { font-style: italic; font-size: 1.4rem; color: var(--purple-deep); }
+
+        /* Footer */
+        footer { background: var(--dark); color: var(--sand); padding: 60px 10%; display: flex; justify-content: space-between; align-items: center; }
+
+        @media (max-width: 768px) {
+            .hero { flex-direction: column; text-align: center; padding-top: 50px; }
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+            .story { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">CHI.</div>
+        <div class="nav-links">
+            <a href="#">About</a>
+            <a href="#">Information</a>
+            <a href="#">Impact</a>
+            <a href="#">Get Involved</a>
+            <a href="#" class="btn-donate">Donate</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Ultimate Guide to Beating Cancer</h1>
+            <p>Providing the resources, research, and human connection needed to navigate your journey with confidence and hope.</p>
+            <a href="#" class="btn-donate" style="padding: 15px 40px; font-weight: bold; text-decoration: none;">Start Your Journey</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&q=80&w=800" alt="Supportive care">
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>What CHI Does</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Patient Advocacy</h3>
+                <p>Personalized guidance through the healthcare system to ensure you receive the best care possible.</p>
+            </div>
+            <div class="card">
+                <h3>Information Hub</h3>
+                <p>Verified, peer-reviewed medical data translated into language everyone can understand.</p>
+            </div>
+            <div class="card">
+                <h3>Impact Research</h3>
+                <p>Directly funding innovative trials that focus on quality of life and non-invasive recovery.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="stats-bar">
+        <div class="stat-item"><h2>12k+</h2><p>Patients Supported</p></div>
+        <div class="stat-item"><h2>$2.4M</h2><p>Research Funded</p></div>
+        <div class="stat-item"><h2>100%</h2><p>Human Led</p></div>
+    </div>
+
+    <section class="section">
+        <div class="story">
+            <div class="story-content">
+                "CHI didn't just give me information; they gave me a community that understood my silence and my strength."
+                <br><br><strong>— Sarah J., Survivor</strong>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <h3>Cancer Health Initiative</h3>
+            <p>Advocacy. Research. Community.</p>
+        </div>
+        <div class="nav-links">
+            <a href="#" style="color: white">Instagram</a>
+            <a href="#" style="color: white">LinkedIn</a>
+            <a href="#" style="color: white">X (Twitter)</a>
+        </div>
+    </footer>
+
+</body>
+</html>
