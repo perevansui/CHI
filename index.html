@@ -5,150 +5,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cancer Health Initiative | Redefining the Journey</title>
     
-    <!-- Fonts: Montserrat & Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <style>
-        :root {
-            --sand: #EAE3DD;
-            --pink-bright: #FB5998;
-            --purple-deep: #330A61;
-            --pink-soft: #FFCFE1;
-            --dark: #311212;
-            --white: #ffffff;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--sand);
-            color: var(--dark);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; text-transform: uppercase; letter-spacing: -0.02em; }
-
-        /* Navigation */
-        nav {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 20px 5%; background: rgba(234, 227, 221, 0.9);
-            backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000;
-        }
-        .logo { font-family: 'Montserrat'; font-weight: 800; color: var(--purple-deep); font-size: 1.5rem; }
-        .nav-links a { text-decoration: none; color: var(--dark); margin: 0 15px; font-weight: 600; font-size: 0.9rem; }
-        .btn-donate { background: var(--pink-bright); color: white !important; padding: 10px 25px; border-radius: 50px; }
-
-        /* Hero Section */
-        .hero {
-            display: flex; align-items: center; min-height: 80vh; padding: 0 10%;
-            gap: 50px; background: linear-gradient(180deg, var(--sand) 0%, var(--white) 100%);
-        }
-        .hero-content { flex: 1; }
-        .hero h1 { font-size: 4rem; color: var(--purple-deep); line-height: 1.1; margin-bottom: 20px; }
-        .hero p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
-        .hero-image { flex: 1; border-radius: 40px; overflow: hidden; height: 500px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-        .hero-image img { width: 100%; height: 100%; object-fit: cover; }
-
-        /* Features */
-        .section { padding: 100px 10%; text-align: center; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
-        .card { 
-            background: white; padding: 40px; border-radius: 24px; 
-            border: 1px solid var(--pink-soft); transition: transform 0.3s ease;
-            text-align: left;
-        }
-        .card:hover { transform: translateY(-10px); }
-        .card h3 { color: var(--pink-bright); margin-bottom: 15px; }
-
-        /* Stats */
-        .stats-bar { background: var(--purple-deep); color: var(--sand); padding: 80px 10%; display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center;}
-        .stat-item h2 { font-size: 3rem; margin-bottom: 10px; color: var(--pink-bright); }
-
-        /* Community Story */
-        .story { background: var(--pink-soft); border-radius: 40px; padding: 60px; margin: 0 10% 100px; display: flex; align-items: center; gap: 40px; }
-        .story-content { font-style: italic; font-size: 1.4rem; color: var(--purple-deep); }
-
-        /* Footer */
-        footer { background: var(--dark); color: var(--sand); padding: 60px 10%; display: flex; justify-content: space-between; align-items: center; }
-
-        @media (max-width: 768px) {
-            .hero { flex-direction: column; text-align: center; padding-top: 50px; }
-            .hero h1 { font-size: 2.5rem; }
-            .nav-links { display: none; }
-            .story { flex-direction: column; text-align: center; }
-        }
-    </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
-        <div class="logo">CHI.</div>
-        <div class="nav-links">
-            <a href="#">About</a>
-            <a href="#">Information</a>
-            <a href="#">Impact</a>
-            <a href="#">Get Involved</a>
-            <a href="#" class="btn-donate">Donate</a>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <!-- Using the extracted logo -->
+                <a href="#"><img src="assets/logo.png" alt="Cancer Health Initiative Logo"></a>
+            </div>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#initiatives">Initiatives</a>
+                <a href="#team">Our Team</a>
+                <a href="#contact" class="btn btn-primary">Join the Movement</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Your Ultimate Guide to Beating Cancer</h1>
-            <p>Providing the resources, research, and human connection needed to navigate your journey with confidence and hope.</p>
-            <a href="#" class="btn-donate" style="padding: 15px 40px; font-weight: bold; text-decoration: none;">Start Your Journey</a>
-        </div>
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&q=80&w=800" alt="Supportive care">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content reveal">
+            <h1>Bridging the Gap Between Cancer Health & Science</h1>
+            <p>Empowering communities through education, advocacy, and support to prevent, detect, and overcome cancer effectively.</p>
+            <a href="#about" class="btn btn-primary">Discover Our Impact <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
         </div>
     </section>
 
-    <section class="section">
-        <h2>What CHI Does</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Patient Advocacy</h3>
-                <p>Personalized guidance through the healthcare system to ensure you receive the best care possible.</p>
-            </div>
-            <div class="card">
-                <h3>Information Hub</h3>
-                <p>Verified, peer-reviewed medical data translated into language everyone can understand.</p>
-            </div>
-            <div class="card">
-                <h3>Impact Research</h3>
-                <p>Directly funding innovative trials that focus on quality of life and non-invasive recovery.</p>
-            </div>
-        </div>
-    </section>
-
-    <div class="stats-bar">
-        <div class="stat-item"><h2>12k+</h2><p>Patients Supported</p></div>
-        <div class="stat-item"><h2>$2.4M</h2><p>Research Funded</p></div>
-        <div class="stat-item"><h2>100%</h2><p>Human Led</p></div>
-    </div>
-
-    <section class="section">
-        <div class="story">
-            <div class="story-content">
-                "CHI didn't just give me information; they gave me a community that understood my silence and my strength."
-                <br><br><strong>— Sarah J., Survivor</strong>
+    <!-- Vision and Mission Section -->
+    <section class="vision-mission" id="about">
+        <div class="container">
+            <div class="vm-grid">
+                <div class="vm-card reveal">
+                    <h2>Vision</h2>
+                    <p>To ensure equitable access to cancer health access, information, and care for all, particularly underserved communities, empowering them to prevent, detect, and overcome cancer effectively.</p>
+                </div>
+                <div class="vm-card reveal" style="transition-delay: 0.2s;">
+                    <h2>Mission</h2>
+                    <p>To bridge the gap between cancer health and information by delivering accessible education, advocacy, and support to the communities that need it the most. We are committed to:</p>
+                    <ul>
+                        <li>Providing accurate and culturally relevant cancer education.</li>
+                        <li>Advocating for early detection, prevention, and access to care.</li>
+                        <li>Building a network of cancer health advocates.</li>
+                        <li>Partnering with researchers, healthcare providers, and policymakers.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div>
-            <h3>Cancer Health Initiative</h3>
-            <p>Advocacy. Research. Community.</p>
+    <!-- Initiatives Section -->
+    <section class="initiatives" id="initiatives">
+        <div class="container">
+            <h2 class="section-title reveal">Our Impact</h2>
+            <div class="initiative-grid">
+                <!-- Cervical Cancer -->
+                <div class="card reveal">
+                    <div class="img-wrapper">
+                        <img src="assets/cervical.jpg" alt="Cervical Cancer Outreach" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <span class="tag">School Outreach</span>
+                        <h3>Cervical Cancer & HPV Uptake</h3>
+                        <p>Our outreach program at Anglican Grammar School reinforced knowledge about cervical cancer among secondary school students, promoting the vital uptake of the HPV vaccination.</p>
+                    </div>
+                </div>
+                
+                <!-- Prostate Cancer -->
+                <div class="card reveal" style="transition-delay: 0.1s;">
+                    <div class="img-wrapper">
+                        <img src="assets/prostate.jpg" alt="Prostate Cancer Stakeholder Meeting" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <span class="tag">Stakeholders Meeting</span>
+                        <h3>Prostate Cancer Awareness</h3>
+                        <p>Educating community stakeholders in Ogbomosho about prostate cancer risk factors, early symptoms, and available prevention. We focus on breaking down stigmas and barriers to medical help.</p>
+                    </div>
+                </div>
+
+                <!-- Breast Cancer -->
+                <div class="card reveal" style="transition-delay: 0.2s;">
+                    <div class="img-wrapper">
+                        <img src="assets/breast.jpg" alt="Breast Cancer Awareness Walk" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <span class="tag">Awareness Walk</span>
+                        <h3>Breast Cancer Awareness</h3>
+                        <p>Our volunteers hit the streets to spread vital information, breaking down myths, and demonstrating self-breast examination techniques. Fostering better understanding and preventive practices.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="nav-links">
-            <a href="#" style="color: white">Instagram</a>
-            <a href="#" style="color: white">LinkedIn</a>
-            <a href="#" style="color: white">X (Twitter)</a>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="container">
+            <h2 class="section-title reveal">Leadership Team</h2>
+            <div class="team-grid">
+                <div class="team-member reveal">
+                    <img src="assets/team-1.jpg" alt="Ajibade Taofeeq Damileye">
+                    <h3>Ajibade Taofeeq Damileye</h3>
+                    <p>Co-Founder</p>
+                </div>
+                <div class="team-member reveal" style="transition-delay: 0.1s;">
+                    <img src="assets/team-2.jpg" alt="Olufemi Seun E.">
+                    <h3>Olufemi Seun E.</h3>
+                    <p>Co-Founder</p>
+                </div>
+                <!-- Extend this for other members if needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content reveal">
+                <div class="footer-brand">
+                    <h2>Cancer Health Initiative</h2>
+                    <p>Building a cancer-aware society where everyone, regardless of socio-economic status, has access to lifesaving information and interventions.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#initiatives">Our Initiatives</a></li>
+                        <li><a href="#team">Leadership Team</a></li>
+                        <li><a href="#">Donate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 Cancer Health Initiative. All Rights Reserved.
+            </div>
         </div>
     </footer>
 
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,9 @@
+node_modules/
+*.pdf
+report_images/
+pdf-pages/
+report_text.txt
+extract*.js
+extract*.mjs
+*.png
+!assets/*.png
